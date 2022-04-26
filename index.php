@@ -1,15 +1,20 @@
 <!DOCTYPE html>
+
 <html>
 
-    <?php include 'includes/head.html';?>
 
+<?php include 'includes/header.html' ?>
 
-    <?php include 'includes/header.html' ;?>
+<?php include 'includes/head.html' ?>
 
-    <body>
-        <h1>Pàgina test Biblioteca</h1>
-        <h2>Test pagina biblioteca</h2>
-    </body>
+<div class="title">
+    <h1>Pàgina Test HTML/CSS</h1>
+</div>
+<div class="paragraph">
+    <p>Aquesta es una pàgina de test creada per probar els llenguatges HTML/CSS</p>
+</div>
+<div>
+    <?php include 'includes/footer.html' ?>
+</div>
 
-    <?php include 'includes/footer.html' ;?>
 </html>

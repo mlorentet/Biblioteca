@@ -1,11 +1,160 @@
-button {
-    color:rgb(0, 0, 0)
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
 }
 
-h1 {
-    font-size: 30px;
+.body-navbar {
+    background: #f7f7f7;
+    color: #545454;
 }
 
-fieldset {
-    margin: 10px;
+.navigation-bar {
+    width: 100%;
+    height: 60px;
+    background: #45474b;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 25px;
+}
+
+.navigation-bar .menu ul {
+    display: flex;
+}
+
+.navigation-bar .menu ul li a {
+    display: block;
+    width: 120px;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    color:#fff;
+    padding: 10px;
+    border-radius: 25px;
+    letter-spacing: 2px;
+    transition: all 0.2 ease;
+}
+
+.navigation-bar .menu ul li:last-child a {
+    margin-right: 0;  
+}
+
+.navigation-bar .menu ul li a:hover,
+.navbar .menu ul li a.active{
+    background: #545454;
+}
+.footer {
+    color: rgb(255, 255, 255);
+    font-family: Arial;
+    font-size: 14px;
+    width: 100vw;
+    display: block;
+    overflow: hidden;
+    padding: 70px 0;
+    background-color: #18181a;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    position: absolute;
+}
+
+
+
+
+.body-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #111;
+}
+
+.log-form {
+    position: relative;
+    width: 500px;
+    padding: 40px;
+    background: #151515;
+}
+
+.log-form h2 {
+    color: #999;
+    margin-bottom: 45px;
+}
+
+.login-usuari {
+    position: relative;
+    height: 40px;
+    width: 100%;
+}
+
+.login-usuari input[type="text"] {
+    font-family: verdana;
+    position: absolute;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    font-size: 16px;
+    color: #fff;
+    width: 100%;
+}
+
+.login-password {
+    position: relative;
+    height: 40px;
+    width: 100%;
+}
+
+.login-password input[type="password"] {
+    position: absolute;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    font-size: 16px;
+    color: #fff;
+    width: 100%;
+    font-family: Verdana;
+    letter-spacing: 1px;
+}
+
+.login-password input[type="text"] 
+{
+    position: absolute;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    font-size: 16px;
+    color: #fff;
+    width: 100%;
+    font-family: Verdana;
+    letter-spacing: 1px;
+}
+
+
+.login-submit-button {
+    padding-top: 15px;
+}
+.login-submit-button input[type="submit"] {
+    position: absolute;
+    background: rgb(255, 255, 255);
+    border: #333;
+    border-radius: 3px;
+    box-shadow: none;
+    font-size: 16px;
+    color: #151515;
+    width: 100px;
+    font-family: verdana;
+}
+
+.body-register {
+    padding-top: 75px;
+}
+
+.title {
+    padding-top: 75px;
 }
