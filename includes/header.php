@@ -10,5 +10,6 @@
         <a href="llibres.php">Llibres</a>
         <a href="prestecs.php">Prestecs</a>
         <a href="socis.php">Socis</a>
+        <a href="register_soci.php">Registre Soci</a>
     </div>    
 </header>
