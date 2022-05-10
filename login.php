@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
+
+<?php include 'includes/header.php' ?>
+
+<?php include 'includes/head.php' ?>
 <div class="body-login">
 
     <body>
-        <?php include 'includes/header.html' ?>
-        <?php include 'includes/head.html' ?>
+
         <div class="log-form">
             <h2>
                 Login to your account
@@ -39,7 +42,7 @@
             </div>
             </form>
         </div>
-        <?php include 'includes/footer.html' ?>
+        <?php include 'includes/footer.php' ?>
     </body>
 </div>
 
