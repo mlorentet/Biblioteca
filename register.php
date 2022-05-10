@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-<?php include 'includes/header.html' ?>
-<?php include 'includes/head.html' ?>
+<?php include 'includes/header.php' ?>
+<?php include 'includes/head.php' ?>
 <div class="body-register">
 
     <body>
@@ -316,7 +316,7 @@
 
 </form>
 
-<?php include 'includes/footer.html' ?>
+<?php include 'includes/footer.php' ?>
 
 </html>
 

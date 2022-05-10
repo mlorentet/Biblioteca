@@ -3,9 +3,9 @@
 <html>
 
 
-<?php include 'includes/header.html' ?>
+<?php include 'includes/header.php' ?>
 
-<?php include 'includes/head.html' ?>
+<?php include 'includes/head.php' ?>
 
 <div class="title">
     <h1>Pàgina Test HTML/CSS</h1>
@@ -14,7 +14,7 @@
     <p>Aquesta es una pàgina de test creada per probar els llenguatges HTML/CSS</p>
 </div>
 <div>
-    <?php include 'includes/footer.html' ?>
+    <?php include 'includes/footer.php' ?>
 </div>
 
 </html>
