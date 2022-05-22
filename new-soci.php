@@ -1,34 +1,59 @@
 <!DOCTYPE html>
-
 <html>
-<?php include 'includes/header.php' ?>
-<?php include 'includes/head.php' ?>
-<div class="body-register">
+<head>
+    <title>New soci</title>
+</head>
+<?php include 'includes/head.php'; ?>
+
+<?php
+$Soci = null;
+if (isset($_GET['DNI'])){
+    $DNI_Soci = $_GET['DNI'];
+    $query = "SELECT * FROM Soci WHERE DNI = '$DNI_Soci' ";
+    $result = mysqli_query($dbh, $query) or die(mysqli_error($dbh));
+    $Soci = mysqli_fetch_assoc($result);
+}
+
+if($Soci != null){
+    $action = 'scripts/update-soci.php';
+} else {
+    $action = 'scripts/insert-soci.php';
+}
+?>
 
     <body>
-        <div class="register-title">
-            <h4>Formulari Registre</h4>
-        </div>
-        <form action="scripts/new-client.php" method="POST">
-                <div class="input-DNI">
-                    <fieldset>
-                        <input type="text" placeholder="DNI" name="DNI" required>
-                    </fieldset>
-                </div>
-                <div class="input-Nom">
-                    <fieldset>
-                        <input type="Text" placeholder="Nom" name="Nom" required>
-                    </fieldset>
-                </div>
-                <div class="input-Llinatges">
-                    <fieldset>
-                        <input type="Text" placeholder="Llinatges" name="Llinatges" maxlength="250">
-                    </fieldset>
-                </div>
-                <div class="Nacionalitat">
-                    <fieldset>
-                        <select name="Nacionalitat">
-                            <option value="">-- Selecciona la teva nacionalitat --</option>
+        <div class="container">
+            <section class="mb-5 mt-5">
+                <?php
+                include 'includes/header.html';
+                ?>
+                <h1 class="mb-5 mt-5">
+                    <?php
+                    if ($Soci == null)
+                        echo 'NOU SOCI';
+                    else
+                        echo 'EDITA EL SOCI';
+                    ?>
+                </h1>
+            </section>
+            <section>
+                <form action="<?=$action?>" method="POST">
+                    <div class="form-group">
+                        <label for="DNI">DNI</label>
+                        <input value="<?=$Soci['DNI'];?>" type="text" name="dni" class="form-control" placeholder="Introdueix el DNI" pattern="[0-9]{8}[A-Za-z]{1}" title="Debe poner 8 números y una letra" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Nom">Nom</label>
+                        <input value="<?=$Soci['Nom'];?>" type="text" name="name" class="form-control" placeholder="Introdueix el nom del soci" maxlength="65" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Llinatges">Llinatges</label>
+                        <input value="<?=$Soci['Llinatges'];?>" type="text" name="surname" class="form-control" placeholder="LLinatges" maxlength="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Nacionalitat">Nacionalitat</label>
+                        <select value="Andorran" name="nationality">
+                            <!--<option value="">-- selecciona la teva nacionalitat --</option>-->
                             <option value="afghan">Afghan</option>
                             <option value="albanian">Albanian</option>
                             <option value="algerian">Algerian</option>
@@ -222,37 +247,22 @@
                             <option value="zambian">Zambian</option>
                             <option value="zimbabwean">Zimbabwean</option>
                         </select>
-                    </fieldset>
-                </div>
-                <div class="input-email">
-                    <fieldset>
-                        <input type="email" placeholder="Correu Electronic" name="correu_electronic" maxlength="250">
-                    </fieldset>
-                </div>
-                <div class="input-telefon">
-                    <fieldset>
-                        <input type="tel" placeholder="Telefon" name="Telefon" maxlength="250">
-                    </fieldset>
-                </div>
-                <div class="input-actiu">
-                    <fieldset>
-                        <input type="number" placeholder="Estat Client" name="active" maxlength="250">
-                    </fieldset>
-                </div>
-</div>
-<div class="submit-button">
-    <input type="submit" value="Enviar">
-</div>
-<div class="reset-button">
-    <input type="reset" value="Reiniciar">
-</div>
-</body>
-</div>
-
-</form>
-
-<?php include 'includes/footer.php' ?>
-
-</html>
-
+                    </div>
+                    <div class="form-group">
+                        <label for="correu_electronic">Correu Electronic</label>
+                        <input type="email" value="<?=$Soci['correu_electronic']; ?>" name="email" class="form-control" placeholder="Correu Electronic" maxlength="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Telefon">Telefon</label>
+                        <input type="tel" value="<?=$Soci['Telefon']; ?>" name="phone" class="form-control" placeholder="Telefon" maxlength="10" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Active">Estat Soci</label>
+                        <input type="text" value="<?=$Soci['Estat_Soci']; ?>" name="state" class="form-control" placeholder="Estat Soci" maxlength="10" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </section>
+        </div>
+    </body>
 </html>
