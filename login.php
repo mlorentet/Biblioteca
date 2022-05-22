@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 
-<?php include 'includes/header.php' ?>
+
 
 <?php include 'includes/head.php' ?>
-<div class="body-login">
 
     <body>
+
+        <?php include 'includes/header.html' ?>
 
         <div class="log-form">
             <h2>
@@ -44,6 +45,5 @@
         </div>
         <?php include 'includes/footer.php' ?>
     </body>
-</div>
 
 </html>

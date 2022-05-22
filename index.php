@@ -2,19 +2,20 @@
 
 <html>
 
-
-<?php include 'includes/header.php' ?>
-
 <?php include 'includes/head.php' ?>
 
-<div class="title">
-    <h1>Pàgina Test HTML/CSS</h1>
-</div>
-<div class="paragraph">
-    <p>Aquesta es una pàgina de test creada per probar els llenguatges HTML/CSS</p>
-</div>
-<div>
+
+<body>
+
+    <?php include 'includes/header.html' ?>
+
+
+    <h1>BBDD Biblioteques</h1>
+
+    <p>Aquest es l'índex de la pàgina</p>
+
     <?php include 'includes/footer.php' ?>
-</div>
+
+</body>
 
 </html>
