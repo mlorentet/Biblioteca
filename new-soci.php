@@ -53,7 +53,7 @@ if($Soci != null){
                     <div class="form-group">
                         <label for="Nacionalitat">Nacionalitat</label>
                         <select value="Andorran" name="nationality">
-                            <!--<option value="">-- selecciona la teva nacionalitat --</option>-->
+                            <--<option value="">-- selecciona la teva nacionalitat --</option>-->
                             <option value="afghan">Afghan</option>
                             <option value="albanian">Albanian</option>
                             <option value="algerian">Algerian</option>
