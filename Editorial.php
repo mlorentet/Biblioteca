@@ -30,7 +30,7 @@
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo "
                             <tr>
-                                <td>".$row['IdEditorial']."</td>
+                                <td>".$row['id']."</td>
                                 <td>".$row['Ciutat']."</td>
                                 <td>".$row['Direccio']."</td>
                                 <td>".$row['CP']."</td>
