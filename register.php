@@ -279,7 +279,8 @@
             </div>
             <div class="input-contrasenya">
                 <fieldset>
-                    <input type="password" id="myInput" placeholder="Contrasenya"></input><br><br>
+                    <input type="password" id="myInput" placeholder="Contrasenya"></input>
+                    <i class="bi bi-eye"></i>
                     <input type="checkbox">Mostra la Contrasenya
                     <!-- <input type="checkbox" onclick="myFunction()">Mostra la Contrasenya -->
 
