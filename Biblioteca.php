@@ -11,7 +11,7 @@
         </section>
         <section>
             <a class="btn btn-primary" href="new-biblioteca.php">Insertar</a>    
-            <table class="table" mt=5>
+            <table class="table" mb='5' mt='5'>
                 <thead>
                     <tr>
                         <th>ID</th>
