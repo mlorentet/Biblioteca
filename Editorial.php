@@ -5,107 +5,53 @@
 
 
 <body>
-
     <div class="container">
-
-        <section class="mb-5 mt-5">
-            <?php
-            include 'includes/header.html';
-            ?>
-            <h1 class="mb-5 mt-5">SOCIS</h1>
-
+        <section class="mb='5' mt='5'">
+            <?php include 'includes/header.html'; ?>
         </section>
         <section>
-
-            <a class="btn btn-primary" href="new-soci.php">INSERTAR NOU SOCI</a>
-
-
-            <table class="table mt-5">
+            <a class="btn btn-primary" href="new-editorial.php">Insertar</a>
+            <table class="table" mb='5' mt='5'>
                 <thead>
                     <tr>
-                        <td>IdEditorial</td>
-                        <td>CP</td>
-                        <td>PROVINCIA</td>
-                        <td>DIRECCIO</td>
-                        <td>PAIS</td>
-                        <td>CIUTAT</td>
+                        <th>ID</th>
+                        <th>CIUTAT</th>
+                        <th>DIRECCIO</th>
+                        <th>CP</th>
+                        <th>PROVINCIA</th>
+                        <th>PAIS</th>
+                        <th>OPCIONS</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                    $query = "SELECT * FROM editorial";
+                    $query = "SELECT * FROM Editorial";
                     $result = mysqli_query($dbh, $query);
                     while ($row = mysqli_fetch_assoc($result)) {
-                        echo "<tr>
-                        <td  scope='row'>" . $row['IdEditorial'] . "</td>
-                        <td>" . $row['CP'] . "</td>
-                        <td>" . $row['Provincia'] . "</td>
-                        <td>" . $row['Direccio'] . "</td>
-                        <td>" . $row['Pais'] . "</td>
-                        <td>" . $row['Ciutat'] . "</td>
-                        <td><a class='btn btn-primary' href='new-editorial.php?id=" . $row['IdEditorial'] . "'>Editar</a></td>
-                    </tr>";
-                    }
-                    ?>
-                </tbody>
-            </table>
-            <?php include 'includes/footer.php'; ?>
-</body>
-
-</html>
-
-<!DOCTYPE html>
-<html>
-
-<?php include 'includes/head.php'; ?>
-
-<body>
-
-    <div class="container">
-
-        <section class="mb-5 mt-5">
-            <?php
-            include 'includes/header.html';
-            ?>
-            <h1 class="mb-5 mt-5">CLIENTS</h1>
-
-        </section>
-        <section>
-
-            <a class="btn btn-primary" href="new-client.php">INSERTAR NOU CLIENT</a>
-
-
-            <table class="table mt-5">
-                <thead>
-                    <tr>
-                        <td>ID</td>
-                        <td>NOM</td>
-                        <td>ADREÇA</td>
-                        <td>EMAIL</td>
-                        <td>CP</td>
-                        <td>Opcions</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    $query = "SELECT * FROM clients";
-                    $result = mysqli_query($dbh, $query);
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        echo "<tr>
-                        <td  scope='row'>" . $row['id'] . "</td>
-                        <td>" . $row['nom'] . "</td>
-                        <td>" . $row['adreca'] . "</td>
-                        <td>" . $row['email'] . "</td>
-                        <td>" . $row['cp'] . "</td>
-                        <td><a class='btn btn-primary' href='new-client.php?id=" . $row['id'] . "'>Editar</a></td>
-                    </tr>";
+                        echo "
+                            <tr>
+                                <td>".$row['IdEditorial']."</td>
+                                <td>".$row['Ciutat']."</td>
+                                <td>".$row['Direccio']."</td>
+                                <td>".$row['CP']."</td>
+                                <td>".$row['Provincia']."</td>
+                                <td>".$row['Pais']."</td>
+                                <td>
+                                    <a class='btn btn-primary' href='new-editorial.php?id=".$row['id']."'>
+                                        <i class='bi bi-pencil-square'></i>
+                                    </a>
+                                    <a class='btn btn-danger' href='scripts/delete-editorial.php?id=".$row['id']."'>
+                                        <i class='bi bi-trash'></i>
+                                    </a>
+                                </td>
+                            </tr>";
                     }
                     ?>
                 </tbody>
             </table>
         </section>
     </div>
-    <footer>Peu de pàgina</footer>
 </body>
+<?php include 'includes/footer.php'; ?>
 
 </html>
