@@ -2,31 +2,24 @@
 <html>
 <?php include 'includes/head.php' ?>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <?php include 'includes/header.html' ?>
-    <div class="register-title">
-        <h4>Formulari Registre</h4>
-    </div>
-    <form>
-        <formfield method="post">
-            <div class="input-usuari">
-                <fieldset>
-                    <input type="text" placeholder="Usuari" required>
-                </fieldset>
+    <h4>Formulari Registre</h4>
+    <div style="text-align:center">
+        <form id="form_login"method="POST">
+            <div class="mb-3">
+                <label for="input-usuari" class="form-label">Usuari</label>
+                <input type="text" class="form-control" id="input-usuari" aria-describedly="usuarihelp" placeholder="Usuari" required>
+                <div id="usuarihelp" class="form-text">Introdueix un nom d'usuari.</div>
             </div>
-            <div class="input-email">
-                <fieldset>
-                    <input type="email" placeholder="Correu Electrònic" required>
-                </fieldset>
+            <div class="mb-3">
+                <label for="input-email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="input-usuari" aria-describedly="emailhelp" placeholder="Correu Electrònic" required>
+                <div id="emailhelp" class="form-text"></div>
             </div>
-            <div class="input-adreça">
-                <fieldset>
-                    <input type="Text" placeholder="Adreça" maxlength="250">
-                </fieldset>
-            </div>
-            <div class="country-select">
-                <fieldset>
-                    <select id="country" name="country">
+            <div class="mb-3">
+                <label for="country-select" class="form-label">Pais</label>
+                <select id="country" class="form-select">
                         <option value="" disabled selected hidden>Selecciona el teu País</option>
                         <option value="Afganistan">Afghanistan</option>
                         <option value="Albania">Albania</option>
@@ -275,46 +268,28 @@
                         <option value="Zambia">Zambia</option>
                         <option value="Zimbabwe">Zimbabwe</option>
                     </select>
-                </fieldset>
+            </div>           
+            <div class="mb-3" >
+                <label for="input-password" class="form-label">Contrasenya</label>
+                <input type="password"  class="form-control" id="myInput" placeholder="Contrasenya">
             </div>
-            <div class="input-contrasenya">
-                <fieldset>
-                    <input type="password" id="myInput" placeholder="Contrasenya"></input>
-                    <i class="bi bi-eye"></i>
-                    <input type="checkbox">Mostra la Contrasenya
-                    <!-- <input type="checkbox" onclick="myFunction()">Mostra la Contrasenya -->
-
-                    <script>
-                        document.querySelector('input[type="checkbox"]').addEventListener('change', () => {
-                            var x = document.querySelector("#myInput");
-                            if (x.type === "password") {
-                                x.type = "text";
-                            } else {
-                                x.type = "password";
-                            }
-                        });
-
-                        // function myFunction() {
-                        //   var x = document.querySelector("#myInput");
-                        //   if (x.type === "password") {
-                        //     x.type = "text";
-                        //   } else {
-                        //     x.type = "password";
-                        //   }
-                        // }
-                    </script>
-                </fieldset>
+            <div>
+                <input type="checkbox" onclick="myFunction()">Mostra la Contrasenya
+                <script>
+                    function myFunction() {
+                        var x = document.getElementById("myInput");
+                        if (x.type === "password") {
+                            x.type = "text";
+                        } else {
+                            x.type = "password";
+                        }
+                    }
+                </script>
             </div>
-            <div class="submit-button">
-                <input type="submit" value="Enviar">
-            </div>
-            <div class="reset-button">
-                <input type="reset" value="Reiniciar">
-            </div>
-</body>
-</div>
-
-</form>
+            <input type="submit" class="btn btn-primary"></button>
+        </form>
+    </div>
+</body>                 
 
 <?php include 'includes/footer.php' ?>
 

@@ -5,7 +5,7 @@
 
 <?php include 'includes/head.php' ?>
 
-    <body>
+    <body class="d-flex flex-column min-vh-100">
 
         <?php include 'includes/header.html' ?>
 

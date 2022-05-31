@@ -3,8 +3,7 @@
 
 <?php include 'includes/head.php'; ?>
 
-
-<body>
+<body class="d-flex flex-column min-vh-100">
     <div class="container">
         <section class="mb='5' mt='5'">
             <?php include 'includes/header.html'; ?>
@@ -17,19 +16,22 @@
                         <th>ID</th>
                         <th>TITOL</th>
                         <th>GENERE</th>
+                        <th>EDITORIAL</th>
                         <th>OPCIONS</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                    $query = "SELECT * FROM Llibre";
-                    $result = mysqli_query($dbh, $query);
+                    $query = "SELECT Editorial.Nom as nom_editorial, Llibre.* FROM Llibre
+                    INNER JOIN Editorial ON (Editorial.id = Llibre.IdEditorial)";
+                    $result = mysqli_query($dbh, $query) or die(mysqli_error($dbh));
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo "
                             <tr>
                                 <td>".$row['id']."</td>
                                 <td>".$row['Titol']."</td>
                                 <td>".$row['Genere']."</td>
+                                <td>".$row['nom_editorial']."</td>
                                 <td>
                                     <a class='btn btn-primary' href='new-llibre.php?id=".$row['id']."'>
                                         <i class='bi bi-pencil-square'></i>
