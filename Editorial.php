@@ -4,7 +4,7 @@
 <?php include 'includes/head.php'; ?>
 
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <div class="container">
         <section class="mb='5' mt='5'">
             <?php include 'includes/header.html'; ?>

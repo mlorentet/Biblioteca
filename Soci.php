@@ -6,14 +6,14 @@
 <?php include 'includes/head.php'; ?>
 
 
-<body>
+<body class="d-flex flex-column min-vh-100">
+    <section class="mb='5' mt='5'">
+        <?php include 'includes/header.html'; ?>
+    </section>
     <div class="container">
-        <section class="mb='5' mt='5'">
-            <?php include 'includes/header.html'; ?>
-        </section>
         <section>
             <a class="btn btn-primary" href="new-soci.php">Insertar</a>
-            <table class=table mt=5>
+            <table class=table mt='5'>
                 <thead>
                     <tr>
                         <th>DNI</th>
