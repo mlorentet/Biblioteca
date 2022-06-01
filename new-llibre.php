@@ -47,6 +47,10 @@ if ($Llibre != null) {
                     <label for="Genere">Genere</label>
                     <input value="<?=$Llibre['Genere'];?>" type="varchar" name="genre" class="form-control" placeholder="Genere" maxlength="100" required>
                 </div>
+                <div class="form-group">
+                    <label for="Editorial">Editorial</label>
+
+                </div>
                 <?php
                 if($Llibre) {
                     echo "<input type='hidden' value='".$Llibre['id']."' name='id'>";
