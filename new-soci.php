@@ -55,7 +55,7 @@ if($Soci != null){
                         <select value="Andorran" name="nationality">
                             <--<option value="">-- selecciona la teva nacionalitat --</option>-->
                             <option value="Afganès">Afganès</option>
-                            <option value="Albanes">Albanes</option>
+                            <option value="Albanès">Albanès</option>
                             <option value="Algerià">Algerià</option>
                             <option value="Americà">Americà</option>
                             <option value="Andorrà">Andorrà</option>
