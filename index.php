@@ -12,7 +12,7 @@
 
     <h1>BBDD Biblioteques</h1>
 
-    <p>Aquest es l'índex de la pàgina</p>
+    <p>Índex de la pàgina</p>
 
     <?php include 'includes/footer.php' ?>
 
