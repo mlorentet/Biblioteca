@@ -8,9 +8,9 @@
 
 <?php
 $Llibre = null;
-if(isset($_GET['id'])){
-    $id_llibre = $_GET['id'];
-    $query = "SELECT * FROM Llibre WHERE id = '$id_llibre' ";
+if(isset($_GET['IdLlibre'])){
+    $id_llibre = $_GET['IdLlibre'];
+    $query = "SELECT * FROM Llibre WHERE IdLlibre = '$id_llibre' ";
     $result = mysqli_query($dbh, $query) or die(mysqli_error($dbh));
     $Llibre = mysqli_fetch_assoc($result);
 }
@@ -48,12 +48,18 @@ if ($Llibre != null) {
                     <input value="<?=$Llibre['Genere'];?>" type="varchar" name="genre" class="form-control" placeholder="Genere" maxlength="100" required>
                 </div>
                 <div class="form-group">
-                    <label for="Editorial">Editorial</label>
-
+                    <label for="Nom Editorial">Editorial</label>
+                    <select name="editorial_name">
+                        <?php
+                            echo "<option value='3'>Test</option>";
+                            echo "<option value='4'>Alfaguara</option>";
+                            echo "<option value='5'>Anagrama</option>";
+                        ?>
+                    </select>
                 </div>
                 <?php
                 if($Llibre) {
-                    echo "<input type='hidden' value='".$Llibre['id']."' name='id'>";
+                    echo "<input type='hidden' value='".$Llibre['IdLlibre']."' name='id'>";
                 }
                 ?>
                 <button type="submit" class="btn btn-primary">Enviar</button>

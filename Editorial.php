@@ -30,17 +30,17 @@
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo "
                             <tr>
-                                <td>".$row['id']."</td>
+                                <td>".$row['IdEditorial']."</td>
                                 <td>".$row['Ciutat']."</td>
                                 <td>".$row['Direccio']."</td>
                                 <td>".$row['CP']."</td>
                                 <td>".$row['Provincia']."</td>
                                 <td>".$row['Pais']."</td>
                                 <td>
-                                    <a class='btn btn-primary' href='new-editorial.php?id=".$row['id']."'>
+                                    <a class='btn btn-primary' href='new-editorial.php?id=".$row['IdEditorial']."'>
                                         <i class='bi bi-pencil-square'></i>
                                     </a>
-                                    <a class='btn btn-danger' href='scripts/delete-editorial.php?id=".$row['id']."'>
+                                    <a class='btn btn-danger' href='scripts/delete-editorial.php?id=".$row['IdEditorial']."'>
                                         <i class='bi bi-trash'></i>
                                     </a>
                                 </td>
