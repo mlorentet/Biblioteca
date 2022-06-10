@@ -4,10 +4,10 @@ require '../includes/database.php';
 
 $Titol = $_POST['title'];
 $Genere = $_POST['genre'];
-$NomEditorial = $_POST['editorial_name'];
-$IdLlibre = $_POST['id'];
+$Nom = $_POST['name'];
+$id_llibre = $_POST['id'];
 
-$query = "UPDATE Llibre SET Titol = '$Titol', Genere = '$Genere', IdEditorial = '$NomEditorial' WHERE IdLlibre ='$IdLlibre' ";
+$query = "UPDATE Llibre SET Titol = '$Titol', Genere = '$Genere', Nom = '$Nom' WHERE IdLlibre = '$id_llibre' ";
 
 $result = mysqli_query($dbh, $query);
 

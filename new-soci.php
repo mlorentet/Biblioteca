@@ -22,11 +22,13 @@ if($Soci != null){
 ?>
 
     <body>
+        <section class="mb-5 mt-5">
+        <?php
+            include 'includes/header.html';
+        ?>
+        </section>
         <div class="container">
-            <section class="mb-5 mt-5">
-                <?php
-                include 'includes/header.html';
-                ?>
+            
                 <h1 class="mb-5 mt-5">
                     <?php
                     if ($Soci == null)
@@ -35,7 +37,7 @@ if($Soci != null){
                         echo 'EDITA EL SOCI';
                     ?>
                 </h1>
-            </section>
+            
             <section>
                 <form action="<?=$action?>" method="POST">
                     <div class="form-group">
@@ -258,7 +260,7 @@ if($Soci != null){
                     </div>
                     <div class="form-group">
                         <label for="Active">Estat Soci</label>
-                        <input type="text" value="<?=$Soci['Estat_Soci']; ?>" name="state" class="form-control" placeholder="Estat Soci" maxlength="10" required>
+                        <input type="text" value="<?=$Soci['Estat']; ?>" name="state" class="form-control" placeholder="Estat Soci" maxlength="10" required>
                     </div>
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>

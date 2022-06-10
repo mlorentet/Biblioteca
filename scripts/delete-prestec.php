@@ -3,9 +3,9 @@ error_reporting(E_ERROR | E_PARSE);
 require '../includes/database.php';
 
 
-$IdPrestec = $_GET['id'];
+$IdPrestec = $_GET['IdPrestec'];
 
-$query = "DELETE FROM Prestec WHERE id = '$IdPrestec'";
+$query = "DELETE FROM Prestec WHERE IdPrestec = '$IdPrestec'";
 
 $result = mysqli_query ($dbh, $query);
 
