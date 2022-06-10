@@ -22,13 +22,13 @@ if($Soci != null){
 ?>
 
     <body>
-        <section class="mb-5 mt-5">
+        <section>
         <?php
             include 'includes/header.html';
         ?>
         </section>
         <div class="container">
-            
+            <section>
                 <h1 class="mb-5 mt-5">
                     <?php
                     if ($Soci == null)
@@ -37,7 +37,7 @@ if($Soci != null){
                         echo 'EDITA EL SOCI';
                     ?>
                 </h1>
-            
+            </section>
             <section>
                 <form action="<?=$action?>" method="POST">
                     <div class="form-group">
