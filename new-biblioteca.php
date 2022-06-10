@@ -23,11 +23,13 @@ if ($Biblioteca != null) {
 ?>
 
 <body>
+    <section>
+    <?php
+    include 'includes/header.html';
+    ?>
+    </section>
     <div class="container">
-        <section class="mb-5 mt-5">
-            <?php
-            include 'includes/header.html';
-            ?>
+        <section>    
             <h1 class="mb-5 mt-5">
                 <?php
                 if ($Biblioteca == null)
