@@ -10,7 +10,11 @@
     <section>
         <?php include 'includes/header.html' ?>
     </section>
+<<<<<<< HEAD
     <div class="container" style="display: flex; align-items: center; justify-content: center;">
+=======
+    <div class="container">
+>>>>>>> main
         <section class="mb-5 mt-5">
             <h2>
                 Inicia Sessió amb el teu compte
@@ -19,13 +23,21 @@
                 <div class="form-group">
                     <fieldset>
                         <label for="Usuari">Usuari</label>
+<<<<<<< HEAD
                         <input type="text" class="form-control" placeholder="Usuari" required />
+=======
+                        <input type="text" placeholder="Usuari" required />
+>>>>>>> main
                     </fieldset>
                 </div>
                 <div class="form-group">
                     <fieldset>
                         <label for="Contrasenya">Contrasenya</label>
+<<<<<<< HEAD
                         <input type="password" class="form-control" id="myInput" placeholder="Contrasenya">
+=======
+                        <input type="password" id="myInput" placeholder="Contrasenya">
+>>>>>>> main
                     </fieldset>
                 </div>
                 <div>
