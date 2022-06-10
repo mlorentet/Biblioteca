@@ -23,11 +23,13 @@ if ($Llibre != null) {
 ?>
 
 <body>
+    <section>
+    <?php
+    include 'includes/header.html';
+    ?>
+    </section>
     <div class="container">
-        <section class="mb-5 mt-5">
-            <?php
-            include 'includes/header.html';
-            ?>
+        <section>
             <h1 class="mb-5 mt-5">
                 <?php
                 if ($Llibre == null)
@@ -48,14 +50,8 @@ if ($Llibre != null) {
                     <input value="<?=$Llibre['Genere'];?>" type="varchar" name="genre" class="form-control" placeholder="Genere" maxlength="100" required>
                 </div>
                 <div class="form-group">
-                    <label for="Nom Editorial">Editorial</label>
-                    <select name="editorial_name">
-                        <?php
-                            echo "<option value='3'>Test</option>";
-                            echo "<option value='4'>Alfaguara</option>";
-                            echo "<option value='5'>Anagrama</option>";
-                        ?>
-                    </select>
+                    <label for="Editorial">Editorial</label>
+                    <input value="<?=$Llibre['Nom'];?>" type="varchar" name="name" class="form-control" placeholder="Nom Editorial" maxlength="50" required> 
                 </div>
                 <?php
                 if($Llibre) {

@@ -10,7 +10,7 @@ $CorreuElectronic = $_POST['email'];
 $Telefon = $_POST['phone'];
 $EstatSoci = $_POST['state'];
 
-$query = "UPDATE Soci SET Nom= '$Nom', Llinatges= '$Llinatges', Nacionalitat= '$Nacionalitat', correu_electronic= '$CorreuElectronic', Telefon= '$Telefon', Estat_Soci= '$EstatSoci' WHERE DNI= '$DNI'";
+$query = "UPDATE Soci SET Nom= '$Nom', Llinatges= '$Llinatges', Nacionalitat= '$Nacionalitat', correu_electronic= '$CorreuElectronic', Telefon= '$Telefon', Estat= '$EstatSoci' WHERE DNI= '$DNI'";
 
 $result = mysqli_query($dbh, $query);
 

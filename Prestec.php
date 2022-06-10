@@ -5,10 +5,10 @@
 
 
 <body class="d-flex flex-column min-vh-100">
-    <div class="container">
-        <section class="mb='5' mt='5'">
-            <?php include 'includes/header.html'; ?>
-        </section>
+    <section class="mb='5' mt='5'">
+        <?php include 'includes/header.html'; ?>
+    </section>
+        <div class="container">
         <section>
             <a class="btn btn-primary" href="new-prestec.php">Insertar</a>
             <table class="table" mb='5' mt='5'>
@@ -29,16 +29,16 @@
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo "
                             <tr>
-                                <td>".$row['id']."</td>
+                                <td>".$row['IdPrestec']."</td>
                                 <td>".$row['Duracio']."</td>
                                 <td>".$row['Data_Inici']."</td>
                                 <td>".$row['Data_Finalitzacio']."</td>
                                 <td>".$row['Estat']."</td>
                                 <td>
-                                    <a class='btn btn-primary' href='new-prestec.php?id=".$row['id']."'>
+                                    <a class='btn btn-primary' href='new-prestec.php?IdPrestec=".$row['IdPrestec']."'>
                                         <i class='bi bi-pencil-square'></i>
                                     </a>
-                                    <a class='btn btn-danger' href='scripts/delete-prestec.php?id=".$row['id']."'>
+                                    <a class='btn btn-danger' href='scripts/delete-prestec.php?IdPrestec=".$row['IdPrestec']."'>
                                         <i class='bi bi-trash'></i>
                                     </a>
                                 </td>

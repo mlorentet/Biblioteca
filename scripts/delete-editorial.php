@@ -3,9 +3,9 @@ error_reporting(E_ERROR | E_PARSE);
 require '../includes/database.php';
 
 
-$IdEditorial = $_GET['id'];
+$IdEditorial = $_GET['IdEditorial'];
 
-$query = "DELETE FROM Editorial WHERE id = '$IdEditorial'";
+$query = "DELETE FROM Editorial WHERE IdEditorial = '$IdEditorial'";
 
 $result = mysqli_query ($dbh, $query);
 

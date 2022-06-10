@@ -6,9 +6,9 @@ $Ciutat = $_POST['city'];
 $Direccio = $_POST['address'];
 $Provincia = $_POST['province'];
 $Pais = $_POST['country'];
-$id = $_POST['id'];
+$id_biblioteca = $_POST['id'];
 
-$query = "UPDATE Biblioteca SET Ciutat = '$Ciutat', Direccio = '$Direccio', Provincia = '$Provincia', Pais = '$Pais' WHERE id = '$id' ";
+$query = "UPDATE Biblioteca SET Ciutat = '$Ciutat', Direccio = '$Direccio', Provincia = '$Provincia', Pais = '$Pais' WHERE IdBiblioteca = '$id_biblioteca' ";
 
 $result = mysqli_query($dbh, $query);
 
