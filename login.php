@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html>
 
-
-
+<head>
+    <title>Formulari Login</title>
+</head>
 <?php include 'includes/head.php' ?>
 
-    <body class="d-flex flex-column min-vh-100">
-
-        <?php include 'includes/header.html' ?>
-
-        <div class="log-form">
-            <h2>
-                Login to your account
-            </h2>
-            <div class="login-usuari">
-                <input type="text" placeholder="Usuari" required />
+<body class="d-flex flex-column min-vh-100">
+    <?php include 'includes/header.html' ?>
+    <div class="log-form">
+        <h2>
+            Inicia Sessió amb el teu compte
+        </h2>
+        <form>
+            <div class="form-group">
+                <fieldset>
+                    <label for="Usuari">Usuari</label>
+                    <input type="text" placeholder="Usuari" required />
+                </fieldset>
             </div>
-            <div class="login-password">
-                <input type="password" id="myInput" placeholder="Contrasenya">
+            <div class="form-group">
+                <fieldset>
+                    <label for="Contrasenya">Contrasenya</label>
+                    <input type="password" id="myInput" placeholder="Contrasenya">
+                </fieldset>
             </div>
-            <div class="login-mostra-la-contrasenya">
+            <div>
                 <input type="checkbox" onclick="myFunction()">Mostra la Contrasenya
                 <script>
                     function myFunction() {
@@ -32,18 +38,15 @@
                     }
                 </script>
             </div>
-            <div class="login-submit-button">
-                <input type="submit" value="Enviar" />
-            </div>
             <div class="login-reset-button">
-                <input type="reset" value="Reiniciar" />
+                <button type="reset" class="btn btn-danger">Reiniciar</button>
             </div>
-            <div class="login-forgot-password">
-                <a class="forgot" href="forgot_password.php">Forgot Password</a>
+            <div class="login-submit-button">
+                <button type="submit" class="btn btn-primary">Enviar</button>
             </div>
-            </form>
-        </div>
-        <?php include 'includes/footer.php' ?>
-    </body>
+        </form>
+    </div>
+    <?php include 'includes/footer.php' ?>
+</body>
 
 </html>
