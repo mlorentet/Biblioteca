@@ -10,7 +10,7 @@
     <section>
         <?php include 'includes/header.html' ?>
     </section>
-    <div class="container">
+    <div class="container" style="display: flex; align-items: center; justify-content: center;">
         <section class="mb-5 mt-5">
             <h2>
                 Inicia Sessió amb el teu compte
