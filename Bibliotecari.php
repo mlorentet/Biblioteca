@@ -5,10 +5,10 @@
 
 
 <body class="d-flex flex-column min-vh-100">
+    <section class="mb='5' mt='5'">
+        <?php include 'includes/header.html'; ?>
+    </section>
     <div class="container">
-        <section class="mb='5' mt='5'">
-            <?php include 'includes/header.html'; ?>
-        </section>
         <section>
             <a class="btn btn-primary" href="new-bibliotecari.php">Insertar</a>
             <table class="table" mb='5' mt='5'>

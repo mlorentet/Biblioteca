@@ -39,7 +39,7 @@
                                 <td>".$row['Nacionalitat']."</td>
                                 <td>".$row['correu_electronic']."</td>
                                 <td>".$row['Telefon']."</td>
-                                <td>".$row['Estat_Soci']."</td>
+                                <td>".$row['Estat']."</td>
                                 <td>
                                     <a class='btn btn-primary' href='new-soci.php?DNI=".$row['DNI']."'>
                                         <i class='bi bi-pencil-square'></i>
