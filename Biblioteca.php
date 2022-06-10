@@ -5,10 +5,11 @@
 
 
 <body class="d-flex flex-column min-vh-100">
+    <section class="mb='5' mt='5'">
+        <?php include 'includes/header.html';?>
+    </section>
     <div class="container">
-        <section class="mb='5' mt='5'">
-            <?php include 'includes/header.html';?>
-        </section>
+        
         <section>
             <a class="btn btn-primary" href="new-biblioteca.php">Insertar</a>    
             <table class="table" mb='5' mt='5'>
@@ -29,16 +30,16 @@
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo "
                             <tr>
-                                <td>".$row['id']."</td>
+                                <td>".$row['IdBiblioteca']."</td>
                                 <td>".$row['Ciutat']."</td>
                                 <td>".$row['Direccio']."</td>
                                 <td>".$row['Provincia']."</td>
                                 <td>".$row['Pais']."</td>
                                 <td>
-                                    <a class='btn btn-primary' href='new-biblioteca.php?id=".$row['id']."'>
+                                    <a class='btn btn-primary' href='new-biblioteca.php?IdBiblioteca=".$row['IdBiblioteca']."'>
                                         <i class='bi bi-pencil-square'></i>
                                     </a>
-                                    <a class='btn btn-danger' href='scripts/delete-biblioteca.php?id=".$row['id']."'>
+                                    <a class='btn btn-danger' href='scripts/delete-biblioteca.php?IdBiblioteca=".$row['IdBiblioteca']."'>
                                         <i class='bi bi-trash'></i>
                                     </a>
                                 </td>
