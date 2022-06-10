@@ -8,9 +8,9 @@
 
 <?php
 $Prestec = null;
-if(isset($_GET['id'])){
-    $id_prestec = $_GET['id'];
-    $query = "SELECT * FROM Prestec WHERE id = '$id_prestec' ";
+if(isset($_GET['IdPrestec'])){
+    $id_prestec = $_GET['IdPrestec'];
+    $query = "SELECT * FROM Prestec WHERE IdPrestec = '$id_prestec' ";
     $result = mysqli_query($dbh, $query) or die(mysqli_error($dbh));
     $Prestec = mysqli_fetch_assoc($result);
 }
@@ -57,7 +57,7 @@ if ($Prestec != null) {
                 </div>
                 <?php
                 if($Prestec) {
-                    echo "<input type='hidden' value='".$Prestec['id']."' name='id'>";
+                    echo "<input type='hidden' value='".$Prestec['IdPrestec']."' name='id'>";
                 }
                 ?>
                 <button type="submit" class="btn btn-primary">Enviar</button>

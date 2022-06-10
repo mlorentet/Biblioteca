@@ -8,9 +8,9 @@
 
 <?php
 $Biblioteca = null;
-if(isset($_GET['id'])){
-    $id_biblioteca = $_GET['id'];
-    $query = "SELECT * FROM Biblioteca WHERE id = '$id_biblioteca' ";
+if(isset($_GET['IdBiblioteca'])){
+    $id_biblioteca = $_GET['IdBiblioteca'];
+    $query = "SELECT * FROM Biblioteca WHERE IdBiblioteca = '$id_biblioteca' ";
     $result = mysqli_query($dbh, $query) or die(mysqli_error($dbh));
     $Biblioteca = mysqli_fetch_assoc($result);
 }
@@ -57,7 +57,7 @@ if ($Biblioteca != null) {
                 </div>
                 <?php
                 if($Biblioteca) {
-                    echo "<input type='hidden' value='".$Biblioteca['id']."' name='id'>";
+                    echo "<input type='hidden' value='".$Biblioteca['IdBiblioteca']."' name='id'>";
                 }
                 ?>
                 <button type="submit" class="btn btn-primary">Enviar</button>

@@ -8,9 +8,9 @@
 
 <?php
 $Editorial = null;
-if(isset($_GET['id'])){
-    $id_editorial = $_GET['id'];
-    $query = "SELECT * FROM Editorial WHERE id = '$id_editorial' ";
+if(isset($_GET['IdEditorial'])){
+    $id_editorial = $_GET['IdEditorial'];
+    $query = "SELECT * FROM Editorial WHERE IdEditorial = '$id_editorial' ";
     $result = mysqli_query($dbh, $query) or die(mysqli_error($dbh));
     $Editorial = mysqli_fetch_assoc($result);
 }
@@ -263,7 +263,7 @@ if ($Editorial != null) {
                 </div>
                 <?php
                 if($Editorial) {
-                    echo "<input type='hidden' value='".$Editorial['id']."' name='id'>";
+                    echo "<input type='hidden' value='".$Editorial['IdEditorial']."' name='id'>";
                 }
                 ?>
                 <button type="submit" class="btn btn-primary">Enviar</button>
