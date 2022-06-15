@@ -28,7 +28,7 @@
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo "
                             <tr>
-                                <td>".$row['IdEditorial']."</td>
+                                <td>".$row['IdLlibre']."</td>
                                 <td>".$row['Titol']."</td>
                                 <td>".$row['Genere']."</td>
                                 <td>".$row['Nom']."</td>

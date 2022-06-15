@@ -19,13 +19,13 @@
                 <div class="form-group">
                     <fieldset>
                         <label for="Usuari">Usuari</label>
-                        <input type="text" placeholder="Usuari" required />
+                        <input type="text" class="form-control" placeholder="Usuari" required />
                     </fieldset>
                 </div>
                 <div class="form-group">
                     <fieldset>
                         <label for="Contrasenya">Contrasenya</label>
-                        <input type="password" id="myInput" placeholder="Contrasenya">
+                        <input type="password" id="myInput" class="form-control" placeholder="Contrasenya">
                     </fieldset>
                 </div>
                 <div>

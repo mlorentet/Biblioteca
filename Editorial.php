@@ -15,6 +15,7 @@
                 <thead>
                     <tr>
                         <th>ID</th>
+                        <th>NOM</th>
                         <th>CIUTAT</th>
                         <th>DIRECCIO</th>
                         <th>CP</th>
@@ -31,6 +32,7 @@
                         echo "
                             <tr>
                                 <td>".$row['IdEditorial']."</td>
+                                <td>".$row['Nom']."</td>
                                 <td>".$row['Ciutat']."</td>
                                 <td>".$row['Direccio']."</td>
                                 <td>".$row['CP']."</td>

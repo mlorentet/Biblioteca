@@ -50,8 +50,17 @@ if ($Llibre != null) {
                     <input value="<?=$Llibre['Genere'];?>" type="varchar" name="genre" class="form-control" placeholder="Genere" maxlength="100" required>
                 </div>
                 <div class="form-group">
-                    <label for="Editorial">Editorial</label>
-                    <input value="<?=$Llibre['Nom'];?>" type="varchar" name="name" class="form-control" placeholder="Nom Editorial" maxlength="50" required> 
+                    <label for="Nom">Nom Editorial</label>
+                    <select  name="name" class="form-control" required>
+                        <option>--Selecciona una editorial--</option>
+                        <?php 
+                            echo"<option value='3'>Alfaguara</option>";
+                            echo"<option value='4'>Caligrama</option>";
+                            echo"<option value='5'>ACEN</option>";
+                            echo"<option value='6'>Planeta</option>";
+                            echo"<option value='7'>Bloomsbury Salamandra Scholastic</option>";
+                        ?>
+                    </select> 
                 </div>
                 <?php
                 if($Llibre) {

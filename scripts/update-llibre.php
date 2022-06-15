@@ -7,7 +7,7 @@ $Genere = $_POST['genre'];
 $Nom = $_POST['name'];
 $id_llibre = $_POST['id'];
 
-$query = "UPDATE Llibre SET Titol = '$Titol', Genere = '$Genere', Nom = '$Nom' WHERE IdLlibre = '$id_llibre' ";
+$query = "UPDATE Llibre SET Titol = '$Titol', Genere = '$Genere', IdEditorial = '$Nom' WHERE IdLlibre = '$id_llibre' ";
 
 $result = mysqli_query($dbh, $query);
 
